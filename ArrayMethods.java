@@ -1,8 +1,14 @@
 public class ArrayMethods {
+
 	public static int rowSum(int[][] ary, int x) {
-
+		int result = 0;
+		if (x >= ary.length) x = 0;
+		for (int i = 0; i < ary[x].length; i++) {
+			result+= ary[x][i];
+		}
+		return result;
 	}
-
+/*
 	public static int columnSum(int[][] ary, int x) {
 
 	}
@@ -20,6 +26,7 @@ public class ArrayMethods {
 	}
 
 	public boolean isColumnMagic(int[][] ary) {
-		
+
 	}
+	*/
 }
