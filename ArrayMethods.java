@@ -2,9 +2,10 @@ public class ArrayMethods {
 
 	public static int rowSum(int[][] ary, int x) {
 		int result = 0;
-		if (x >= ary.length) x = 0;
-		for (int i = 0; i < ary[x].length; i++) {
-			result+= ary[x][i];
+		if (x < ary.length && x >= 0) {
+			for (int i = 0; i < ary[x].length; i++) {
+				result+= ary[x][i];
+			}
 		}
 		return result;
 	}
@@ -12,8 +13,7 @@ public class ArrayMethods {
 	public static int columnSum(int[][] ary, int x) {
 		int result = 0;
 		for (int i = 0; i < ary.length; i++) {
-			if (x >= ary[i].length) result+= 0;
-			else result+= ary[i][x];
+			if (x < ary[i].length && x >= 0) result+= ary[i][x];
 		}
 		return result;
 	}
