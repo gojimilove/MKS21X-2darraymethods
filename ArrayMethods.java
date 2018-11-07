@@ -17,15 +17,27 @@ public class ArrayMethods {
 		}
 		return result;
 	}
-/*
+
 	public static int[] allRowSums(int[][] ary) {
-
+		int[] a = new int[ary.length];
+		for (int i = 0; i < ary.length; i++) {
+			a[i] = rowSum(ary, i);
+		}
+		return a;
 	}
 
-	public static int[] allSolSums(int[][] ary) {
-
+	public static int[] allColSums(int[][] ary) {
+		int index = 0;
+		for (int i = 0; i < ary.length; i++) {
+			if (ary[i].length > index) index = ary[i].length;
+		}
+		int[] a = new int[index];
+		for (int i = 0; i < index; i++) {
+			a[i] = columnSum(ary, i);
+		}
+		return a;
 	}
-
+/*
 	public static boolean isRowMagic(int[][] ary) {
 
 	}
