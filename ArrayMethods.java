@@ -37,13 +37,25 @@ public class ArrayMethods {
 		}
 		return a;
 	}
-/*
+
 	public static boolean isRowMagic(int[][] ary) {
-
+		int sum = rowSum(ary, 0);
+		for (int i = 1; i < ary.length; i++) {
+			if (rowSum(ary, i) != sum) return false;
+		}
+		return true;
 	}
 
-	public boolean isColumnMagic(int[][] ary) {
-
+	public static boolean isColumnMagic(int[][] ary) {
+		int sum = columnSum(ary, 0);
+		int columns = 0;
+		for (int i = 0; i < ary.length; i++) {
+			if (ary[i].length > columns) columns = ary[i].length;
+		}
+		for (int i = 1; i < columns; i++) {
+			if (columnSum(ary, i) != sum) return false;
+		}
+		return true;
 	}
-	*/
+	
 }
