@@ -18,6 +18,17 @@ public class Driver {
 			{1, 2, 3},
 			{4, 5, 6, 7, 8},
 			{9, 10, 11, 12, 13, 14, 15}};
+		int[][] equalRows = new int[][] {
+			{0, 2, 4},
+			{1, 2, 3},
+			{0, 0, 6},
+			{3, 0, 3}};
+		int[][] equalColumns = new int[][] {
+			{0, 2, 4},
+			{1, 2, 0},
+			{0, 0, 0},
+			{3, 0, 0}};
+		
 		System.out.println("\nTesting rowSum(int[][] ary, int x)");
 		System.out.println(ArrayMethods.rowSum(a, 0)+" = 0?");
 		System.out.println(ArrayMethods.rowSum(a, 3)+" = 84?");
@@ -39,9 +50,13 @@ public class Driver {
 		System.out.println("\n=======\n");
 
 		System.out.println("\nTesting isRowMagic(int[][] ary)");
+		System.out.println(ArrayMethods.isRowMagic(a)+" = false?");
+		System.out.println(ArrayMethods.isRowMagic(equalRows)+" = true?");
 		System.out.println("\n=======\n");
 
 		System.out.println("\nTesting isColumnMagic(int[][] ary)");
+		System.out.println(ArrayMethods.isColumnMagic(a)+" = false?");
+		System.out.println(ArrayMethods.isColumnMagic(equalColumns)+" = true?");
 		System.out.println("\n");
 
 	}
